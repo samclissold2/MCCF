@@ -1,0 +1,31 @@
+# Large files exceeding GitHub's limits
+PDP8/data/Solar/yearly geotiff/Vietnam_GISdata_LTAy_YearlyMonthlyTotals_GlobalSolarAtlas-v2_AAIGRID/GHI.asc
+PDP8/data/Solar/yearly geotiff/Vietnam_GISdata_LTAy_YearlyMonthlyTotals_GlobalSolarAtlas-v2_AAIGRID/GTI.asc
+PDP8/data/population/vnm_general_2020_csv.zip
+PDP8/data/Solar/yearly geotiff/Vietnam_GISdata_LTAy_YearlyMonthlyTotals_GlobalSolarAtlas-v2_AAIGRID/DNI.asc
+
+# Large CSV files
+data/raw/2025-01-17/2025-01-17_00-00-00_UTC_2025-01-17_23-59-59_UTC.csv
+data/raw/2025-01-18/2025-01-18_00-00-00_UTC_2025-01-18_23-59-59_UTC.csv
+data/raw/2025-01-19/2025-01-19_00-00-00_UTC_2025-01-19_23-59-59_UTC.csv
+
+# Large files (>50MB)
+# Results
+results/vn_projects_with_layers.html
+results/vn_transmission_map.html
+results/vn_integrated_map.html
+
+# Data files
+data/raw/2025-01-17/2025-01-17_00-00-00_UTC_2025-01-17_23-59-59_UTC.csv
+data/raw/2025-01-18/2025-01-18_00-00-00_UTC_2025-01-18_23-59-59_UTC.csv
+data/raw/2025-01-19/2025-01-19_00-00-00_UTC_2025-01-19_23-59-59_UTC.csv
+data/Solar/Vietnam_GISdata_LTAym_AvgDailyTotals_GlobalSolarAtlas-v2_GEOTIFF.zip
+data/Solar/Vietnam_GISdata_LTAym_YearlyMonthlyTotals_GlobalSolarAtlas-v2_GEOTIFF.zip
+data/Solar/yearly geotiff/Vietnam_GISdata_LTAy_YearlyMonthlyTotals_GlobalSolarAtlas-v2_AAIGRID/DIF.asc
+data/Solar/yearly geotiff/Vietnam_GISdata_LTAy_YearlyMonthlyTotals_GlobalSolarAtlas-v2_AAIGRID/GHI.asc
+data/Solar/yearly geotiff/Vietnam_GISdata_LTAy_YearlyMonthlyTotals_GlobalSolarAtlas-v2_AAIGRID/DNI.asc
+data/Solar/yearly geotiff/Vietnam_GISdata_LTAy_YearlyMonthlyTotals_GlobalSolarAtlas-v2_AAIGRID/GTI.asc
+data/population/vnm_general_2020_csv.zip
+data/extracted_data/solar_irradiance_points.csv
+
+
