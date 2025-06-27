@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vietnam Power Infrastructure Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+        }
+        .map-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .map-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #666;
+        }
+        .stats-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .tech-badge {
+            background: #667eea;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin: 0.25rem;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-bolt me-2"></i>
+                Vietnam Power Infrastructure
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 mb-4">
+                <i class="fas fa-map-marked-alt me-3"></i>
+                Power Infrastructure Dashboard
+            </h1>
+            <p class="lead mb-4">Interactive maps and analysis of Vietnam's power generation projects, transmission networks, and infrastructure</p>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div id="stats-container" class="row">
+                        <!-- Stats will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maps Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">
+                <i class="fas fa-layer-group me-2"></i>
+                Interactive Maps
+            </h2>
+            
+            <div class="row g-4">
+                <!-- Projects Map -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="card map-card h-100">
+                        <div class="card-img-top">
+                            <i class="fas fa-solar-panel"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-project-diagram me-2"></i>
+                                Power Projects
+                            </h5>
+                            <p class="card-text">Interactive map showing all planned and existing power generation projects across Vietnam with technology types and capacity information.</p>
+                            <a href="/projects" class="btn btn-primary" target="_blank">
+                                <i class="fas fa-external-link-alt me-2"></i>
+                                View Map
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transmission Map -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="card map-card h-100">
+                        <div class="card-img-top">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-bolt me-2"></i>
+                                Transmission Network
+                            </h5>
+                            <p class="card-text">Comprehensive view of Vietnam's power transmission infrastructure including power lines, voltage levels, and grid connections.</p>
+                            <a href="/transmission" class="btn btn-primary" target="_blank">
+                                <i class="fas fa-external-link-alt me-2"></i>
+                                View Map
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Substations Map -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="card map-card h-100">
+                        <div class="card-img-top">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-building me-2"></i>
+                                Substations
+                            </h5>
+                            <p class="card-text">Map of electrical substations across Vietnam showing voltage levels, capacity, and operational status.</p>
+                            <a href="/substations" class="btn btn-primary" target="_blank">
+                                <i class="fas fa-external-link-alt me-2"></i>
+                                View Map
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Integrated Map -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="card map-card h-100">
+                        <div class="card-img-top">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-chart-network me-2"></i>
+                                Integrated View
+                            </h5>
+                            <p class="card-text">Complete integrated view combining projects, transmission lines, and substations for comprehensive infrastructure analysis.</p>
+                            <a href="/integrated" class="btn btn-primary" target="_blank">
+                                <i class="fas fa-external-link-alt me-2"></i>
+                                View Map
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Existing Generators -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="card map-card h-100">
+                        <div class="card-img-top">
+                            <i class="fas fa-power-off"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-plug me-2"></i>
+                                Existing Generators
+                            </h5>
+                            <p class="card-text">Map of currently operational power generation facilities across Vietnam with detailed capacity and technology information.</p>
+                            <a href="/existing-generators" class="btn btn-primary" target="_blank">
+                                <i class="fas fa-external-link-alt me-2"></i>
+                                View Map
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Distribution -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h3 class="text-center mb-4">
+                <i class="fas fa-chart-pie me-2"></i>
+                Technology Distribution
+            </h3>
+            <div id="tech-distribution" class="text-center">
+                <!-- Technology badges will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 Vietnam Power Infrastructure Dashboard. Powered by Folium and Flask.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Load statistics and technology distribution
+        fetch('/api/projects')
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    console.error('Error loading data:', data.error);
+                    return;
+                }
+                
+                // Update stats
+                const statsContainer = document.getElementById('stats-container');
+                statsContainer.innerHTML = `
+                    <div class="col-md-4">
+                        <div class="stats-card text-center">
+                            <h3>${data.total_projects}</h3>
+                            <p class="mb-0">Total Projects</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stats-card text-center">
+                            <h3>${data.technologies.length}</h3>
+                            <p class="mb-0">Technology Types</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stats-card text-center">
+                            <h3><i class="fas fa-map-marked-alt"></i></h3>
+                            <p class="mb-0">Interactive Maps</p>
+                        </div>
+                    </div>
+                `;
+                
+                // Update technology distribution
+                const techContainer = document.getElementById('tech-distribution');
+                techContainer.innerHTML = data.technologies.map(tech => 
+                    `<span class="tech-badge">${tech}</span>`
+                ).join('');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('stats-container').innerHTML = 
+                    '<div class="col-12 text-center"><p>Error loading data</p></div>';
+            });
+    </script>
+</body>
+</html> 
