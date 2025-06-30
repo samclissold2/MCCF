@@ -28,4 +28,56 @@ data/Solar/yearly geotiff/Vietnam_GISdata_LTAy_YearlyMonthlyTotals_GlobalSolarAt
 data/population/vnm_general_2020_csv.zip
 data/extracted_data/solar_irradiance_points.csv
 
+# Sensitive data files - API keys and credentials
+# These files contain API keys, credentials, or other sensitive information
+API tools/mccf-translate-key.json
+API tools/translate_with_gcp.py
+
+# Large files (>100MB) that would cause Git push errors
+PDP8/data/vnm_general_2020.csv
+PDP8/data/vnm_general_2020_compressed.zip
+
+# Common large file patterns
+*.csv
+*.xlsx
+*.xls
+*.zip
+*.tar.gz
+*.7z
+*.rar
+*.iso
+*.dmg
+*.exe
+*.msi
+*.pkg
+*.deb
+*.rpm
+
+# Data files (keep only compressed versions)
+*.parquet
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.json.gz
+*.json.bz2
+
+# Exceptions - keep organized/compressed data
+!organized/
+!compressed/
+!*_compressed.zip
+!*_metadata.json
+
+# Backup and temporary directories
+old_chunks_backup/
+backup/
+temp/
+tmp/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+
 
