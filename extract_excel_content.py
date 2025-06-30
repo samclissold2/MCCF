@@ -5,7 +5,8 @@ import openpyxl
 import subprocess
 import gc
 
-excel_path = r"C:\Users\SamClissold\OneDrive - Carbon Tracker Initiative\Desktop\MCCF\Models\Ninh Binh Gas Model_V7.xlsm"
+
+excel_path = r"C:\Users\SamClissold\OneDrive - Carbon Tracker Initiative\Desktop\MCCF\Models\Ninh Binh Gas Model_V8.xlsm"
 
 def extract_all_vba(file_path):
     print("\n=== VBA CODE EXTRACTION ===")
@@ -50,6 +51,8 @@ def extract_all_data(file_path):
         df.to_csv(f"{sheet_name}_complete.csv", index=False, header=False)
 
     print("\n✅ All sheets exported as complete CSV files.")
+
+
 
 def extract_named_ranges(file_path):
     print("\n=== NAMED RANGES EXTRACTION ===")
@@ -213,11 +216,14 @@ def extract_all_formulas_from_workbook(excel_path, output_path):
         except:
             pass
 
+
+
+
 if __name__ == "__main__":
     extract_all_vba(excel_path)
     extract_all_data(excel_path)
     extract_named_ranges(excel_path)
-    # Use the new function to extract ALL formulas from ALL sheets
+    #Use the new function to extract ALL formulas from ALL sheets
     extract_all_formulas_from_workbook(excel_path, "extracted_formulas.txt")
     print("\n✅ All extractions complete.")
 

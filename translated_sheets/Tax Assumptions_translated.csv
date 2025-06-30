@@ -1,0 +1,17 @@
+﻿Model Functioning Without Errors,Unnamed: 1,Unnamed: 2
+,Profits Tax,
+,Tax Charge,0.2
+,% of Fixed assets allowable for capital allowance,1
+,Depreciation Lifetime,25
+,Claim from operation start date,2029-09-01 00:00:00
+,End of Claim,2054-08-31 00:00:00
+,,
+,Value-Added Tax,
+,Value-Added Tax Rate,0.1
+,No. of months delay for Value-Added Tax receipts,2
+,,
+,Fixed Assets,
+,Start of depreciation,2029-09-01 00:00:00
+,Number of years the asset is depreciated,20
+,End of depreciation land & building,2049-08-31 00:00:00
+,no of period semi annual,40

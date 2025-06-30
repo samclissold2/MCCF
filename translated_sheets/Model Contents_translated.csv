@@ -1,0 +1,20 @@
+﻿Model Functioning Without Errors,Unnamed: 1,Unnamed: 2
+,,
+Contents Page,,
+,,
+,Worksheet Name,Description
+,Methodology,This sheet contains information on the model's methodology with regards to debt structuring and tax optimisation
+,Template,Formatting and colour-coding for the model
+,Project Finance Dashboard,"Displays the key outputs of the model in a clear, high-level format suitable for reports and presentations. Includes IRRs, cash flows, debt ratios, and other metrics across different scenarios. On this dashboard, there is the option to choose a number of scenarios, 'Base Case', High Case', 'Low Case' and 'Custom Case'. Base Case Uses assumptions based on Benchmarks found in Circular No. 09/2025/TT-BCT Circular, No. 983/QD-BCT and the new Electricity Law
+
+It is recommended to set the Project Finance Dashboard to 'Base Case', then switch to 'Custom Case', after which you can view how deviations of input assumptions from Electricity Benchmark Prices and Inputs will impact project returns and structuring"
+,Project Finance,"Details the debt structuring, drawdown, interest, and repayment profile. This sheet calculates debt service, debt sizing, and sculpting based on projected cash flows and tax considerations. Performs the core financial valuation, including calculation of project IRRs, NPV, and refinancing scenarios. It synthesizes inputs from other sheets to calculate overall project economics and assess refinancing benefits."
+,Valuation and Refinancing,Offers the option to analyse how post-operations refinancing of debt impact overall project returns
+,Scenarios,"Controls the scenario logic of the model. Allows users to switch between Base, Low, High, and Custom cases, and feeds these assumptions into other worksheets accordingly."
+,"Policies, Data & Conversions","Houses supporting data such as macroeconomic assumptions (e.g. inflation, FX rates), policy factors and Circulars, and unit conversions. Also includes mapping between units and currencies."
+,Operating Assumptions,"Contains the key technical and operational parameters of the gas project. Includes capacity, availability, degradation, fuel prices, heat rate, and dispatch assumptions."
+,EBITDA and Capital Expenditures,"Calculates pre-tax operating finance results from revenues and O&M costs, and lays out the project’s capital expenditures (CAPEX) profile including timing and phasing."
+,Annual Analysis,"Aggregates financial results on an annual basis, including key metrics like revenues, EBITDA, capex, debt service, taxes, and free cash flow. Charts on the Dashboard may link to data within this sheet"
+,Finance and Value Assumptions,"Contains the key financial assumptions such as discount rates, WACC, financing fees, inflation, and residual value assumptions. These feed directly into the 'Project Finance' and 'Valuation and Refinancing' sheets."
+,Tax Assumptions,"Specifies the corporate tax regime, Valued-Added Tax Treatment, depreciation schedules etc."
+,Audit Sheet,"A control and diagnostics sheet that checks for model integrity. It flags errors, balance mismatches, or inconsistencies in inputs and calculations. If there is an error in due to a change in customisable assumptions, this will show at the top of each worksheet in Cell A1. If Cell a! contains anything other than 'Model Functioning without errors', please re-adjust assumptions."

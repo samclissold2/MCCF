@@ -1,0 +1,13 @@
+﻿Model Functioning Without Errors,Unnamed: 1,Unnamed: 2,Unnamed: 3
+,Item,Switch,Description
+,Balance sheet check,True,
+,Funding sheet check,True,
+,DSRA fully funded,True,
+,MRA fully funded,True,
+,Senior Debt Test,True,
+,Debt Funding,True,
+,Debt Adders Test,True,
+,Computed DSCR Test,True,
+,Value-Added Tax Refunds Test,True,
+,Debt Repayment Test,True,
+,Agregate Model Test,True,Model Functioning Without Errors

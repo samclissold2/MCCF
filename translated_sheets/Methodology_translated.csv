@@ -1,0 +1,27 @@
+﻿Model Functioning Without Errors,Unnamed: 1,Unnamed: 2
+Modelling Methodology & Documentation,,
+,,
+,,"This model is designed for a gas plant in Vietnam. Initially, the model is tuned to present results for a 300MW Combined-Cycle Gas Plant that uses domestic gas sourced from within Vietnam. However, there are options to change nameplate capacity and fuel source on the 'Project Finance Dashboards' worksheet and the 'Operating Assumptions' Worksheet.
+
+A core functionality of the model is debt-sizing and structuring. The methodology is desgined to calculate the gas plant's debt and loan repayment chedule to align with the project’s ability to pay — this is known as debt sculpting. Rather than having fixed debt repayments (like a mortgage), the repayments are shaped to match the project’s expected cash flow each year, after accounting for operating costs, taxes, and other obligations. The goal is to maintain a consistent Debt Service Coverage Ratio (DSCR) — a financial metric that ensures the project always generates more than enough cash to cover its loan payments. The model has options to include only one loan tranche, or to explore senior and subhordinated tranching
+
+To do this, the model:
+
+   1) Starts by estimating the total cost of the project, then deducts the equity contribution to find out how much needs to be borrowed.
+   2) Forecasts the project’s cash flow after costs and taxes (CFADS).
+   3) Based on a target DSCR (e.g. 1.3x), it works backwards to calculate how much debt service the project can afford each year.
+   4) From this, it splits the debt service into interest and principal repayments.
+   5)It then updates the loan balance and recalculates interest, which affects taxes — and repeats this loop until everything lines up.
+
+Because interest payments reduce taxable income, the model also simulates tax calculations during the sculpting process. This is important because taxes affect the cash available to repay debt. The model:
+
+   1) Forecasts profit before tax based on revenues, costs, depreciation, and interest.
+   2) Applies the tax rate, including any carry-forward losses from earlier years.
+   3) Adjusts the available cash flow accordingly.
+   4) This tax estimate feeds back into the debt sculpting loop, ensuring the repayment plan reflects the true, after-tax cash available.
+
+All assumptions regarding the operations (costs & revenue components, generation etc.), financing and tax are customisable either on the 'Project Finance Dashboard' worksheet (which is easiest), or in the assumptions' corresponding worksheet.
+
+If you would like to size the debt based on equal repayment structures, you can choose 'Equal Instalments' or 'Annuity' on either the 'Project Finance Dashboards' or 'Project Financing' worksheets. However, this will impact debt sizing and project returns.
+
+On the 'Valuation and Refinancing' Worksheet, you can analyse the impact of post-operations refinancing on project returns"
